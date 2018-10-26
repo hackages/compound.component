@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'my-app',
+  template: `
+    <toggle [on]="true" (toggled)="showMessage($event)"></toggle>
+  `
 })
 export class AppComponent {
-  title = 'compound-comp';
+  showMessage(value) {
+    console.log(value);
+  }
 }
