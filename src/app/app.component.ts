@@ -3,7 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'my-app',
   template: `
-    <toggle [on]="true" (toggled)="showMessage($event)"></toggle>
+  <toggle (toggle)="onToggle($event)">
+	  <toggle-button></toggle-button>
+	  <toggle-on>On</toggle-on>
+	  <toggle-off>Off</toggle-off>
+  </toggle>
   `
 })
 export class AppComponent {
